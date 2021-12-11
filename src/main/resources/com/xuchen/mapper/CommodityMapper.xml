@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--name space-->
+<mapper namespace="com.xuchen.mapper.CommodityMapper">
+
+    <resultMap id="CommodityResultMap" type="com.xuchen.pojo.Commodity">
+<!--        column name is in the table-->
+        <result column="name" property="name"/>
+        <result column="price" property="price"/>
+        <result column="conditions" property="condition"/>
+        <result column="search_time" property="searchTime"/>
+        <result column="stock" property="stock"/>
+        <result column="original_price" property="originalPrice"/>
+        <result column="sold_number" property="soldNumber"/>
+        <result column="shipping" property="shipping"/>
+        <result column="delivery" property="delivery"/>
+        <result column="url" property="url"/>
+
+    </resultMap>
+    <insert id="addOne">
+        insert into commodity1209 (name, price, conditions, shipping, search_time, stock, original_price, sold_number, delivery, url)
+        values (#{name},#{price},#{condition},#{shipping},#{searchTime},#{stock},#{originalPrice},#{soldNumber},#{delivery}, #{url});
+    </insert>
+
+    <insert id="exampleAdd">
+        insert into commodity1209 (name, price, conditions, shipping)
+        values ("spoon", "14", "new", "now free");
+    </insert>
+    <select id="selectAll" resultMap="CommodityResultMap">
+        select * from commodity1209;
+    </select>
+    <delete id="clearAll">
+        delete from commodity1209;
+    </delete>
+
+</mapper>
