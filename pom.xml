@@ -138,6 +138,22 @@
           <encoding>UTF-8</encoding>
         </configuration>
       </plugin>
+        <plugin>
+            <artifactId>maven-assembly-plugin</artifactId>
+            <version>2.2</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <mainClass>com.xuchen.crawler.MyFrame</mainClass>
+                    </manifest>
+                </archive>
+                <descriptorRefs>
+                    <descriptorRef>
+                        jar-with-dependencies
+                    </descriptorRef>
+                </descriptorRefs>
+            </configuration>
+        </plugin>
 
       <!-- Allows the example to be run via 'mvn camel:run' -->
       <plugin>
