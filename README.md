@@ -7,7 +7,7 @@ This is a IntelliJ Idea maven project. After downloading it, you need to use Int
 
 The user interface should be like this:
 
-![image-20220211102427814](C:\Users\Joyce\AppData\Roaming\Typora\typora-user-images\image-20220211102427814.png)
+![image](./picture/Picture1.png)
 
  
 
@@ -17,7 +17,7 @@ I used WebMagic as the crawler framework. In order to connect database, I choose
 
 Here is the structure of this framework:
 
-![image-20220211102324313](C:\Users\Joyce\AppData\Roaming\Typora\typora-user-images\image-20220211102324313.png)
+![image-20220211102324313](./picture/Picture2.png)
 
 The class Spider is assembled by these parts: 
 
